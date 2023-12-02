@@ -21,10 +21,14 @@ const pwaConfig: Partial<VitePWAOptions> = {
 			}
 		]
 	},
+	strategies: "generateSW",
 	includeAssets: [
 		"**/*",
 	],
 	manifest: manifest as Partial<ManifestOptions>,
+	devOptions: {
+		enabled: true,
+	}
 };
 
 // https://vitejs.dev/config/
