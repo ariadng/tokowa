@@ -5,8 +5,11 @@ import manifest from "./public/manifest.json"
 
 const pwaConfig: Partial<VitePWAOptions> = {
 	registerType: "prompt",
+	workbox: {
+		globPatterns: ["**/*"],
+	},
 	includeAssets: [
-		"vite.svg",
+		"**/*",
 	],
 	manifest: manifest as Partial<ManifestOptions>,
 };
