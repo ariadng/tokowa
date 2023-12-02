@@ -4,9 +4,22 @@ import { ManifestOptions, VitePWA, VitePWAOptions } from "vite-plugin-pwa";
 import manifest from "./public/manifest.json"
 
 const pwaConfig: Partial<VitePWAOptions> = {
-	registerType: "prompt",
+	registerType: "autoUpdate",
+	injectRegister: "auto",
 	workbox: {
 		globPatterns: ["**/*"],
+		runtimeCaching: [
+			{
+				urlPattern: () => true,
+				handler: "NetworkFirst",
+				options: {
+					cacheName: "default-cache",
+					cacheableResponse: {
+						statuses: [0, 200],
+					}
+				}
+			}
+		]
 	},
 	includeAssets: [
 		"**/*",
