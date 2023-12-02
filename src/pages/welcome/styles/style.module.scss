@@ -1,0 +1,12 @@
+// Mobile style
+@import "./mobile";
+
+// Tablet style
+@media screen and (min-width: calc(var(--breakpoint-mobile) + 1px)) {
+	@import "./tablet";
+}
+
+// Desktop style
+@media screen and (min-width: calc(var(--breakpoint-tablet) + 1px)) {
+	@import "./desktop";
+}

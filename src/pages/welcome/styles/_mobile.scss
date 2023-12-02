@@ -1,0 +1,22 @@
+.WelcomePage {
+	@apply p-6;
+
+	.Logo {
+		@apply w-full h-10;
+		@apply mb-12;
+
+		img {
+			@apply h-full w-auto;
+		}
+	}
+
+	h1 {
+		@apply mb-6;
+		@apply font-bold text-3xl text-stone-700;
+	}
+
+	p.Lead {
+		@apply font-medium text-xl text-stone-500;
+	}
+
+} // .WelcomePage
