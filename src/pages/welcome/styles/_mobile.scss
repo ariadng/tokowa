@@ -1,22 +1,44 @@
 .WelcomePage {
-	@apply p-6;
 
-	.Logo {
-		@apply w-full h-10;
-		@apply mb-12;
-
-		img {
-			@apply h-full w-auto;
+	
+	.Cover {
+		@apply relative grow shrink;
+		@apply flex flex-col;
+		
+		.Logo {
+			@apply relative shrink-0 grow-0 z-[10];
+			@apply w-full h-20;
+			@apply p-6;
+	
+			img {
+				@apply h-full w-auto;
+			}
+			
+		} // .Logo
+		
+		.Background {
+			@apply absolute top-0 left-0 z-[1];
+			@apply w-full h-full;
+			@apply object-cover;
 		}
-	}
+		
+		.Text {
+			@apply mt-auto pt-20 px-6 pb-12;
+			@apply relative z-[10];
+			@apply flex flex-col gap-4;
+			@apply bg-gradient-to-b from-transparent to-black/70;
+			
+			h1 {
+				@apply font-bold text-2xl text-white;
+			}
 
-	h1 {
-		@apply mb-6;
-		@apply font-bold text-3xl text-stone-700;
-	}
+			p.Lead {
+				@apply mb-6;
+				@apply font-medium text-white/70;
+			}
 
-	p.Lead {
-		@apply font-medium text-xl text-stone-500;
-	}
+		} // .Text
+
+	} // .Cover
 
 } // .WelcomePage

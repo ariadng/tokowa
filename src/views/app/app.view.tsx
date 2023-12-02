@@ -1,15 +1,13 @@
 "use client";
 
-import { ReactNode } from "react";
+import { Outlet } from "react-router-dom";
 import styles from "./styles/style.module.scss";
 
-export function AppView(props: {
-	children?: ReactNode;
-}) {
+export function AppView() {
 
 	return (
 		<div className={styles.AppView}>
-			{props.children}
+			<Outlet />
 		</div>
 	);
 
