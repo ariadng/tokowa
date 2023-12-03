@@ -21,9 +21,7 @@ const pwaConfig: Partial<VitePWAOptions> = {
 			}
 		]
 	},
-	strategies: 'injectManifest',
-	srcDir: 'src',
-	filename: 'swtest.js',
+	strategies: 'generateSW',
 	includeAssets: [
 		"**/*",
 	],
