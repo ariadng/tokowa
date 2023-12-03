@@ -28,10 +28,14 @@ export function WelcomePage() {
 						and tracking sales will be much easier.
 					</p>
 
-					<Button label="Login or Register" />
 				</div>
+
 			</div>
 
+			<div className={styles.LoginActions}>
+				<Button label="Login or Register" color="dark" />
+				<Button label="Continue as guest" />
+			</div>
 			
 
 		</PageView>

@@ -1,9 +1,9 @@
 .WelcomePage {
-
+	@apply p-2 gap-2;
 	
 	.Cover {
 		@apply relative grow shrink;
-		@apply flex flex-col;
+		@apply flex flex-col rounded-lg overflow-hidden;
 		
 		.Logo {
 			@apply relative shrink-0 grow-0 z-[10];
@@ -40,5 +40,9 @@
 		} // .Text
 
 	} // .Cover
+
+	.LoginActions {
+		@apply flex flex-col gap-2;
+	} // .LoginActions
 
 } // .WelcomePage
