@@ -21,14 +21,16 @@ const pwaConfig: Partial<VitePWAOptions> = {
 			}
 		]
 	},
-	strategies: "generateSW",
+	strategies: 'injectManifest',
+	srcDir: 'src',
+	filename: 'swtest.js',
 	includeAssets: [
 		"**/*",
 	],
-	manifest: manifest as Partial<ManifestOptions>,
 	devOptions: {
 		enabled: true,
-	}
+	},
+	manifest: manifest as Partial<ManifestOptions>,
 };
 
 // https://vitejs.dev/config/
